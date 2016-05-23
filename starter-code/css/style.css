@@ -1,1 +1,7 @@
-/* file for your css */
+ul {
+	list-style: none;
+}
+
+.well {
+	text-align: center;
+}
