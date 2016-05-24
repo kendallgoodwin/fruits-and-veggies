@@ -6,6 +6,9 @@ app.controller("HomeCtrl", ['$scope', function($scope, $http) {
 
 	$scope.left = [];
 	$scope.right = [];
+	$scope.pool = true;
+	$scope.fruits = true;
+	$scope.veggies = true;
 
 	$scope.fruitVeggies = [
 			'Banana',
@@ -16,12 +19,34 @@ app.controller("HomeCtrl", ['$scope', function($scope, $http) {
 			'Arugula'
 	];
 
-	$scope.toCol1 = function() {
-		$scope.left.push()
+	$scope.toCol1 = function(i) {
+		// $scope.left.push(this.fv);
+		$scope.left.push($scope.fruitVeggies.splice(i,1))
+		console.log(this);
+		this.pool = false;
+		this.fruit = true;
 	}
 
-	$scope.toCol2 = function() {
-		$scope.right.push($scope.li)
+	$scope.toCol3 = function(i) {
+		// $scope.right.push(this.fv);
+		$scope.right.push($scope.fruitVeggies.splice(i,1))
+		this.pool = false;
+		this.veggies = true;
+	}
+
+	$scope.backToCenter = function(i) {
+		// $scope.fruitVeggies.push(this.fv);
+		$scope.fruitVeggies.push($scope.left.splice(i,1));
+		console.log(this);
+		this.fruits = false;
+		this.pool = true;
+	}
+
+	$scope.backToMiddle = function(i) {
+		$scope.fruitVeggies.push($scope.right.splice(i,1));
+		// $scope.fruitVeggies.push(this.fv);
+		this.veggies =  false;
+		this.pool = true;
 	}
 
 }]);
