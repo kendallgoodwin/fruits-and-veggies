@@ -19,25 +19,25 @@
                     <div ng-model="left">
                     <ul>
                     <div class="well"
-                    <li ng-repeat="fv in left track by $index" ng-show="fruits">
+                    <li ng-repeat="fv in left" ng-show="fruits">
                     {{fv}}
                     <button class="btn" ng-class="{'btn-primary':primary,'btn-xs':small}" ng-click="backToCenter($index)"><i class="fa fa-lg fa-arrow-right" aria-hidden="true"></i></button>
                     </li>
                     </div>
                     </ul>
                     </div>
-                    {{left}}
+                    <!-- {{left}} -->
                 </div>
                 <div class="col-sm-4">
                     Pool<br>
                     <ul>
                     <div class="well"
-                    <li ng-repeat="fv in fruitVeggies track by $index" ng-show="pool">
+                    <li ng-repeat="fv in fruitVeggies" ng-show="pool">
                     <button class="btn" ng-class="{'btn-primary':primary,'btn-xs':small}" ng-click="toCol1($index)"><i class="fa fa-lg fa-arrow-left" aria-hidden="true"></i></button> 
                     {{fv}}
                     <button class="btn" ng-class="{'btn-primary':primary,'btn-xs':small}" ng-click="toCol3($index)"><i class="fa fa-lg fa-arrow-right" aria-hidden="true"></i></button></li>
                     </div>
-                    {{fruitVeggies}}
+                    <!-- {{fruitVeggies}} -->
                     </ul>
                 </div>
                 <div class="col-sm-4">
@@ -45,7 +45,7 @@
                     <div ng-model="right">
                     <ul>
                     <div class="well"
-                    <li ng-repeat="fv in right track by $index" ng-show="veggies">
+                    <li ng-repeat="fv in right" ng-show="veggies">
                     <button class="btn" ng-class="{'btn-primary':primary,'btn-xs':small}" ng-click="backToMiddle($index)"><i class="fa fa-lg fa-arrow-left" aria-hidden="true"></i></button>
                     {{fv}}
                     </li>
